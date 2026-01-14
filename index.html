@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Najwaa 💌</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-heart"></i> For Najwa Ramadhani Caniago</h1>
+            <p class="subtitle">Sebuah pesan dari seseorang yang spesial...</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="heart-container">
+                    <div class="heart" id="mainHeart">❤️</div>
+                </div>
+                <p class="click-instruction">Klik hati ini untuk mulai membaca 💖</p>
+                <!-- HAPUS HINT TENTANG MUSIK -->
+            </section>
+
+            <!-- Message Section - SIMPLIFIED -->
+            <section class="message hidden" id="secretMessage">
+                <h2><i class="fas fa-envelope-open-text"></i> Pesan Dari Hati</h2>
+                
+                <!-- TYPING CONTAINER SIMPLE -->
+                <div class="typing-simple-container">
+                    <div id="typingText" class="typing-text"></div>
+                </div>
+                
+                <!-- SIMPLE CONTROLS -->
+                <div class="simple-controls">
+                    <button class="btn-simple" id="pauseBtn">
+                        <i class="fas fa-pause"></i> Jeda
+                    </button>
+                    <button class="btn-simple" id="resumeBtn" style="display:none;">
+                        <i class="fas fa-play"></i> Lanjut
+                    </button>
+                    <button class="btn-simple" id="skipBtn">
+                        <i class="fas fa-forward"></i> Lewati
+                    </button>
+                </div>
+                
+                <button class="btn-next-simple" id="nextBtn">
+                    <i class="fas fa-arrow-down"></i> Lanjut ke Pertanyaan
+                </button>
+            </section>
+
+            <!-- Question Section -->
+            <section class="question hidden" id="question">
+                <h2><i class="fas fa-question-circle"></i> Pertanyaan Dari Hati</h2>
+                <div class="question-simple">
+                    <div class="question-text-simple">
+                        <p>Setelah semua kata-kata tadi...</p>
+                        <p class="main-question">Najwaa, mau nggak mencoba sesuatu yang lebih dari sekadar teman?</p>
+                    </div>
+                    <div class="options-simple">
+                        <button class="btn-option-simple yes-btn" id="yesBtn">
+                            <i class="fas fa-check-circle"></i> Mau dong! 🥰
+                        </button>
+                        <button class="btn-option-simple maybe-btn" id="maybeBtn">
+                            <i class="fas fa-clock"></i> Butuh waktu... 🤔
+                        </button>
+                    </div>
+                    <div class="response-simple hidden" id="response"></div>
+                </div>
+            </section>
+
+            <!-- Closing Section -->
+            <section class="closing hidden" id="closing">
+                <h2><i class="fas fa-heartbeat"></i> Terima Kasih</h2>
+                <div class="closing-simple">
+                    <p>Aku tahu ini mungkin berani dan random banget...</p>
+                    <p>Tapi aku nggak menyesal udah bilang semua ini.</p>
+                    <p class="closing-highlight-simple">Apapun jawabanmu, terima kasih sudah menjadi bagian dari hariku.</p>
+                    <div class="signature-simple">
+                        <p>Dengan tulus,</p>
+                        <p class="signature-name">[Kak Laurenn]</p> <!-- GANTI INI -->
+                    </div>
+                </div>
+                <div class="social">
+                    <p>Mau ngobrol lebih lanjut?</p>
+                    <div class="social-icons">
+                        <!-- GANTI LINK DI BAWAH INI -->
+                        <a href="https://wa.me/6281235199875" class="social-link" target="_blank" title="Chat WhatsApp">
+                            <span class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </span>
+                            <span class="social-text">WhatsApp</span>
+                        </a>
+                        <a href="https://instagram.com/rennl4uu" class="social-link" target="_blank" title="Instagram">
+                            <span class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                            <span class="social-text">Instagram</span>
+                        </a>
+                        <a href="#" class="social-link" id="copyEmail" title="Copy Email">
+                            <span class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="social-text">Email</span>
+                        </a>
+                    </div>
+                    <p class="social-note"><small>Klik salah satu untuk langsung menghubungi aku</small></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Dibuat dengan <i class="fas fa-heartbeat"></i> oleh seseorang yang belajar berani mengungkapkan perasaan.</p>
+            <p class="tech">Made by Kak Laurennnn</p>
+            <p class="copyright">© 2026 - For Mich Only</p>
+        </footer>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- HAPUS SEMUA ELEMENT AUDIO & KONTROL -->
+    <!-- Notification -->
+    <div class="notification hidden" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

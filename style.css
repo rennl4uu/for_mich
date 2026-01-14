@@ -1,0 +1,827 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== HEADER ===== */
+header {
+    margin-bottom: 40px;
+    padding-top: 20px;
+    animation: fadeIn 1s ease;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #ff6b8b;
+    text-shadow: 0 0 15px rgba(255, 107, 139, 0.5);
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    color: #a5b4fc;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    margin: 50px 0;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+.heart-container {
+    margin: 30px auto;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background: rgba(255, 107, 139, 0.1);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 107, 139, 0.3);
+}
+
+.heart-container:hover {
+    transform: scale(1.05);
+    background: rgba(255, 107, 139, 0.15);
+    box-shadow: 0 0 30px rgba(255, 107, 139, 0.3);
+}
+
+.heart {
+    font-size: 130px;
+    animation: heartbeat 1.5s infinite ease-in-out;
+    filter: drop-shadow(0 0 15px rgba(255, 0, 85, 0.8));
+}
+
+.click-instruction {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #ffccd5;
+    font-weight: 500;
+}
+
+/* ===== MESSAGE SECTION - SIMPLIFIED ===== */
+.message {
+    margin: 40px 0;
+}
+
+.message h2 {
+    margin-bottom: 30px;
+    color: #ffccd5;
+    font-size: 2rem;
+}
+
+.typing-simple-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    min-height: 400px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.typing-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    min-height: 300px;
+}
+
+/* Text Highlighting - SIMPLE */
+.highlight {
+    color: #ffcc00;
+    font-weight: 600;
+    background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.1), transparent);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.emphasis {
+    font-style: italic;
+    color: #a5b4fc;
+}
+
+.special-line {
+    color: #ffccd5;
+    font-weight: 500;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Simple Controls */
+.simple-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.btn-simple {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-simple:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn-next-simple {
+    background: linear-gradient(90deg, #ff6b8b, #ff8e53);
+    border: none;
+    padding: 16px 45px;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px 0 40px;
+    transition: all 0.3s;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(255, 107, 139, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-next-simple:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 139, 0.4);
+}
+
+/* ===== QUESTION SECTION - SIMPLIFIED ===== */
+.question {
+    margin: 40px 0;
+}
+
+.question h2 {
+    margin-bottom: 30px;
+    color: #ffccd5;
+    font-size: 2rem;
+}
+
+.question-simple {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.question-text-simple {
+    margin-bottom: 40px;
+}
+
+.question-text-simple p:first-child {
+    font-size: 1.2rem;
+    color: #a5b4fc;
+    margin-bottom: 15px;
+}
+
+.main-question {
+    font-size: 1.6rem;
+    color: #ffcc00;
+    line-height: 1.5;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    background: linear-gradient(90deg, #ff416c, #ff6b8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Options Simple */
+.options-simple {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.btn-option-simple {
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.yes-btn {
+    background: linear-gradient(90deg, #00b09b, #96c93d);
+    color: white;
+}
+
+.maybe-btn {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    color: white;
+}
+
+.btn-option-simple:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Response Simple */
+.response-simple {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease;
+    border: 2px dashed rgba(150, 201, 61, 0.3);
+}
+
+.response-simple h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.response-simple p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* ===== CLOSING SECTION - SIMPLIFIED ===== */
+.closing {
+    margin: 50px 0;
+}
+
+.closing h2 {
+    margin-bottom: 30px;
+    color: #ffccd5;
+    font-size: 2rem;
+}
+
+.closing-simple {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closing-simple p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.closing-highlight-simple {
+    font-size: 1.3rem;
+    color: #ff6b8b;
+    margin: 25px 0;
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 15px;
+    background: rgba(255, 107, 139, 0.1);
+    border-radius: 10px;
+}
+
+.signature-simple {
+    margin-top: 40px;
+    text-align: right;
+    font-style: italic;
+}
+
+.signature-simple p:first-child {
+    margin-bottom: 5px;
+    color: #a5b4fc;
+}
+
+.signature-name {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+/* ===== SOCIAL MEDIA LINKS ===== */
+.social {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.social p {
+    margin-bottom: 20px;
+    color: #a5b4fc;
+    font-size: 1.1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Warna khusus untuk setiap platform */
+.social-link:nth-child(1) .social-icon {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: rgba(37, 211, 102, 0.3);
+}
+
+.social-link:nth-child(1):hover .social-icon {
+    background: #25D366;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.social-link:nth-child(2) .social-icon {
+    background: rgba(225, 48, 108, 0.2);
+    border-color: rgba(225, 48, 108, 0.3);
+}
+
+.social-link:nth-child(2):hover .social-icon {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    box-shadow: 0 0 20px rgba(225, 48, 108, 0.4);
+}
+
+.social-link:nth-child(3) .social-icon {
+    background: rgba(255, 107, 139, 0.2);
+    border-color: rgba(255, 107, 139, 0.3);
+}
+
+.social-link:nth-child(3):hover .social-icon {
+    background: #ff6b8b;
+    box-shadow: 0 0 20px rgba(255, 107, 139, 0.4);
+}
+
+.social-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.social-link:hover .social-text {
+    opacity: 1;
+    color: #ffccd5;
+    transform: scale(1.05);
+}
+
+.social-note {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech {
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+    color: #a5b4fc;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== CONFETTI CANVAS ===== */
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* ===== NOTIFICATION ===== */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    z-index: 10000;
+    animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+    display: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.notification.show {
+    display: block;
+}
+
+/* Tambahan untuk notifikasi type */
+.notification.success {
+    border-left: 5px solid #96c93d;
+}
+
+.notification.error {
+    border-left: 5px solid #ff416c;
+}
+
+.notification.info {
+    border-left: 5px solid #a5b4fc;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.hidden {
+    display: none !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 107, 139, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 107, 139, 0.7);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    /* Hero */
+    .heart-container {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .heart {
+        font-size: 100px;
+    }
+    
+    .click-instruction {
+        font-size: 1.2rem;
+    }
+    
+    /* Message */
+    .typing-simple-container {
+        padding: 30px 20px;
+        margin: 20px 10px;
+    }
+    
+    .typing-text {
+        font-size: 1.1rem;
+        min-height: 300px;
+    }
+    
+    .btn-simple {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    
+    /* Question */
+    .question-simple {
+        padding: 30px 20px;
+        margin: 30px 10px;
+    }
+    
+    .main-question {
+        font-size: 1.4rem;
+    }
+    
+    .btn-option-simple {
+        min-width: 180px;
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .options-simple {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    /* Closing */
+    .closing-simple {
+        padding: 30px 20px;
+        margin: 20px 10px;
+    }
+    
+    .closing-highlight-simple {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+    
+    .signature-name {
+        font-size: 1.3rem;
+    }
+    
+    /* Social */
+    .social-icons {
+        gap: 20px;
+    }
+    
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .social-link {
+        min-width: 80px;
+    }
+    
+    /* Notification */
+    .notification {
+        bottom: 20px;
+        right: 15px;
+        left: 15px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Hero */
+    .heart-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .heart {
+        font-size: 80px;
+    }
+    
+    .click-instruction {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+    
+    /* Message */
+    .message h2,
+    .question h2,
+    .closing h2 {
+        font-size: 1.6rem;
+    }
+    
+    .typing-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .simple-controls {
+        gap: 10px;
+    }
+    
+    .btn-simple {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-next-simple {
+        padding: 14px 35px;
+        font-size: 1rem;
+    }
+    
+    /* Question */
+    .main-question {
+        font-size: 1.2rem;
+    }
+    
+    .btn-option-simple {
+        width: 90%;
+        margin-bottom: 10px;
+        min-width: unset;
+    }
+    
+    /* Closing */
+    .closing-simple {
+        padding: 20px 15px;
+    }
+    
+    .closing-simple p {
+        font-size: 1rem;
+    }
+    
+    .closing-highlight-simple {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    
+    .signature-name {
+        font-size: 1.2rem;
+    }
+    
+    /* Social */
+    .social-icons {
+        gap: 15px;
+    }
+    
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
+    
+    .social-text {
+        font-size: 0.8rem;
+    }
+    
+    .social-note {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .tech {
+        font-size: 0.8rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .heart {
+        font-size: 70px;
+    }
+    
+    .heart-container {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .typing-text {
+        font-size: 0.95rem;
+    }
+    
+    .btn-option-simple {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
