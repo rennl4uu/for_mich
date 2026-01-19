@@ -83,7 +83,7 @@ h1 {
     font-weight: 500;
 }
 
-/* ===== MESSAGE SECTION - SIMPLIFIED ===== */
+/* ===== MESSAGE SECTION ===== */
 .message {
     margin: 40px 0;
 }
@@ -113,7 +113,6 @@ h1 {
     min-height: 300px;
 }
 
-/* Text Highlighting - SIMPLE */
 .highlight {
     color: #ffcc00;
     font-weight: 600;
@@ -135,7 +134,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Simple Controls */
 .simple-controls {
     display: flex;
     justify-content: center;
@@ -187,7 +185,7 @@ h1 {
     box-shadow: 0 8px 25px rgba(255, 107, 139, 0.4);
 }
 
-/* ===== QUESTION SECTION - SIMPLIFIED ===== */
+/* ===== QUESTION SECTION ===== */
 .question {
     margin: 40px 0;
 }
@@ -229,7 +227,6 @@ h1 {
     background-clip: text;
 }
 
-/* Options Simple */
 .options-simple {
     display: flex;
     justify-content: center;
@@ -270,7 +267,6 @@ h1 {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Response Simple */
 .response-simple {
     margin-top: 30px;
     padding: 25px;
@@ -290,7 +286,7 @@ h1 {
     line-height: 1.6;
 }
 
-/* ===== CLOSING SECTION - SIMPLIFIED ===== */
+/* ===== CLOSING SECTION ===== */
 .closing {
     margin: 50px 0;
 }
@@ -344,7 +340,7 @@ h1 {
     font-weight: 600;
 }
 
-/* ===== SOCIAL MEDIA LINKS ===== */
+/* ===== SOCIAL MEDIA ===== */
 .social {
     margin-top: 40px;
     padding-top: 30px;
@@ -394,7 +390,7 @@ h1 {
     border: 2px solid transparent;
 }
 
-/* Warna khusus untuk setiap platform */
+/* WhatsApp */
 .social-link:nth-child(1) .social-icon {
     background: rgba(37, 211, 102, 0.2);
     border-color: rgba(37, 211, 102, 0.3);
@@ -405,6 +401,7 @@ h1 {
     box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
 }
 
+/* Instagram */
 .social-link:nth-child(2) .social-icon {
     background: rgba(225, 48, 108, 0.2);
     border-color: rgba(225, 48, 108, 0.3);
@@ -413,16 +410,6 @@ h1 {
 .social-link:nth-child(2):hover .social-icon {
     background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
     box-shadow: 0 0 20px rgba(225, 48, 108, 0.4);
-}
-
-.social-link:nth-child(3) .social-icon {
-    background: rgba(255, 107, 139, 0.2);
-    border-color: rgba(255, 107, 139, 0.3);
-}
-
-.social-link:nth-child(3):hover .social-icon {
-    background: #ff6b8b;
-    box-shadow: 0 0 20px rgba(255, 107, 139, 0.4);
 }
 
 .social-text {
@@ -466,7 +453,7 @@ footer {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ===== CONFETTI CANVAS ===== */
+/* ===== CONFETTI ===== */
 #confettiCanvas {
     position: fixed;
     top: 0;
@@ -501,7 +488,6 @@ footer {
     display: block;
 }
 
-/* Tambahan untuk notifikasi type */
 .notification.success {
     border-left: 5px solid #96c93d;
 }
@@ -514,7 +500,7 @@ footer {
     border-left: 5px solid #a5b4fc;
 }
 
-/* ===== UTILITY CLASSES ===== */
+/* ===== UTILITY ===== */
 .hidden {
     display: none !important;
 }
@@ -562,7 +548,7 @@ footer {
     }
 }
 
-/* ===== SCROLLBAR STYLING ===== */
+/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -581,7 +567,7 @@ footer {
     background: rgba(255, 107, 139, 0.7);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -595,7 +581,6 @@ footer {
         font-size: 1.1rem;
     }
     
-    /* Hero */
     .heart-container {
         width: 180px;
         height: 180px;
@@ -609,7 +594,6 @@ footer {
         font-size: 1.2rem;
     }
     
-    /* Message */
     .typing-simple-container {
         padding: 30px 20px;
         margin: 20px 10px;
@@ -625,7 +609,6 @@ footer {
         font-size: 0.95rem;
     }
     
-    /* Question */
     .question-simple {
         padding: 30px 20px;
         margin: 30px 10px;
@@ -647,7 +630,6 @@ footer {
         gap: 15px;
     }
     
-    /* Closing */
     .closing-simple {
         padding: 30px 20px;
         margin: 20px 10px;
@@ -662,7 +644,6 @@ footer {
         font-size: 1.3rem;
     }
     
-    /* Social */
     .social-icons {
         gap: 20px;
     }
@@ -677,7 +658,6 @@ footer {
         min-width: 80px;
     }
     
-    /* Notification */
     .notification {
         bottom: 20px;
         right: 15px;
@@ -695,7 +675,6 @@ footer {
         font-size: 1rem;
     }
     
-    /* Hero */
     .heart-container {
         width: 150px;
         height: 150px;
@@ -710,7 +689,6 @@ footer {
         padding: 0 10px;
     }
     
-    /* Message */
     .message h2,
     .question h2,
     .closing h2 {
@@ -736,7 +714,6 @@ footer {
         font-size: 1rem;
     }
     
-    /* Question */
     .main-question {
         font-size: 1.2rem;
     }
@@ -747,7 +724,6 @@ footer {
         min-width: unset;
     }
     
-    /* Closing */
     .closing-simple {
         padding: 20px 15px;
     }
@@ -765,7 +741,6 @@ footer {
         font-size: 1.2rem;
     }
     
-    /* Social */
     .social-icons {
         gap: 15px;
     }
@@ -785,7 +760,6 @@ footer {
         padding: 0 10px;
     }
     
-    /* Footer */
     footer {
         padding: 20px 10px;
         font-size: 0.8rem;
@@ -796,7 +770,6 @@ footer {
     }
 }
 
-/* For very small screens */
 @media (max-width: 320px) {
     h1 {
         font-size: 1.6rem;
