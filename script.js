@@ -12,12 +12,12 @@ const pauseBtn = document.getElementById('pauseBtn');
 const resumeBtn = document.getElementById('resumeBtn');
 const skipBtn = document.getElementById('skipBtn');
 const notification = document.getElementById('notification');
-const copyEmailBtn = document.getElementById('copyEmail');
 
 // ===== PESAN CONFESS =====
 const messages = [
     "Aku mau ngomong sesuatu yang dari kemarin-kemarin sebenarnya sudah aku pendam...",
-    "Cuma aku bingung cara nyampeinnya. Semakin sering aku ngobrol sama kamu, semakin aku sadar...",
+    "Cuma aku bingung cara nyampeinnya.",
+    "Semakin sering aku ngobrol sama kamu, semakin aku sadar...",
     "Kamu tuh punya cara sendiri buat bikin aku nyaman.",
     "Entah dari cara kamu cerita, cara kamu bercanda...",
     "Atau sikap kamu yang kadang sederhana tapi ngena banget.",
@@ -53,8 +53,6 @@ let skipRequested = false;
 let confettiAnimation = null;
 
 // ===== FUNGSI UTAMA =====
-
-// Fungsi untuk mendapatkan kelas berdasarkan konten pesan
 function getMessageClass(message) {
     const msg = message.toLowerCase();
     if (msg.includes("beneran") || msg.includes("jatuh cinta") || msg.includes("suka sama kamu")) {
@@ -67,7 +65,6 @@ function getMessageClass(message) {
     return "";
 }
 
-// Fungsi efek ketik dengan highlighting
 function typeMessage() {
     if (skipRequested) {
         skipToEnd();
@@ -100,10 +97,8 @@ function typeMessage() {
             typingText.innerHTML += char;
             charIndex++;
             
-            // Auto scroll ke bawah
             typingText.parentElement.scrollTop = typingText.parentElement.scrollHeight;
             
-            // Speed variations untuk efek natural
             let speed = typingSpeed;
             if (char === ',' || char === ';') speed = 100;
             if (char === '.' || char === '!' || char === '?') speed = 200;
@@ -119,7 +114,6 @@ function typeMessage() {
             messageIndex++;
             charIndex = 0;
             
-            // Jeda antar pesan
             if (messageIndex < messages.length) {
                 setTimeout(typeMessage, 500);
             } else {
@@ -130,7 +124,6 @@ function typeMessage() {
     }
 }
 
-// Fungsi skip ke akhir
 function skipToEnd() {
     typingText.innerHTML = "";
     messages.forEach((msg) => {
@@ -246,27 +239,8 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// ===== SOCIAL MEDIA FUNCTIONS =====
-function setupSocialLinks() {
-    const yourEmail = "emailkamu@gmail.com";
-    
-    copyEmailBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        navigator.clipboard.writeText(yourEmail).then(() => {
-            showNotification("📧 Email berhasil disalin: " + yourEmail, 'success');
-        }).catch(err => {
-            console.error('Gagal copy email:', err);
-            showNotification("❌ Gagal menyalin. Email: " + yourEmail, 'error');
-        });
-    });
-}
-
 // ===== EVENT LISTENERS =====
-
-// Heart Click - SIMPLE VERSION (TANPA MUSIK)
 mainHeart.addEventListener('click', () => {
-    // Animasi heart tanpa musik
     mainHeart.style.animation = 'none';
     mainHeart.parentElement.style.opacity = '0';
     mainHeart.parentElement.style.transform = 'scale(0.8)';
@@ -281,7 +255,6 @@ mainHeart.addEventListener('click', () => {
     }, 800);
 });
 
-// Message Controls
 pauseBtn.addEventListener('click', () => {
     isPaused = true;
     pauseBtn.style.display = 'none';
@@ -302,7 +275,6 @@ skipBtn.addEventListener('click', () => {
     skipBtn.style.display = 'none';
 });
 
-// Next Button
 nextBtn.addEventListener('click', () => {
     if (isTyping && !skipRequested) {
         skipRequested = true;
@@ -314,12 +286,11 @@ nextBtn.addEventListener('click', () => {
     question.style.animation = 'fadeInUp 1s ease';
 });
 
-// Answer Buttons
 yesBtn.addEventListener('click', () => {
     response.innerHTML = `
         <h3 style="color: #96c93d;">🎉 YAYYY! TERIMA KASIH! 🎉</h3>
         <p>Aku nggak nyangka kamu bakal jawab iya! Ini bener-bener bikin hariku!</p>
-        <p>Aku tunggu kabar baiknya ya Najwaa! 😊</p>
+        <p>Aku tunggu kabar baiknya ya Mich! 😊</p>
         <p style="margin-top: 15px;"><i>Website ini jadi kenangan pertama kita ya! 💝</i></p>
     `;
     response.classList.remove('hidden');
@@ -364,31 +335,19 @@ function handleResize() {
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
-    // Set nama di signature
     const signatureName = document.querySelector('.signature-name');
     if (signatureName) {
-        signatureName.textContent = "[Kak Laurennn]";
+        signatureName.textContent = "[Kak Laurennn]"; // GANTI NAMA LO
     }
     
-    // Setup social links
-    setupSocialLinks();
-    
-    // Initial state
     nextBtn.style.display = 'none';
-    
-    // Setup window resize handler
     window.addEventListener('resize', handleResize);
-    
-    // Initial canvas setup
     handleResize();
     
-    // Welcome message
-    console.log("💌 Website Confess for Mich loaded successfully!");
-    console.log("🎵 No music - Clean version");
+    console.log("💌 Website Confess for Mich loaded!");
     console.log("❤️ Good luck bro!");
 });
 
-// Clean up confetti ketika tab ditutup
 window.addEventListener('beforeunload', () => {
     if (confettiAnimation) {
         cancelAnimationFrame(confettiAnimation);
