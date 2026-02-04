@@ -291,7 +291,7 @@ yesBtn.addEventListener('click', () => {
     response.innerHTML = `
         <h3 style="color: #96c93d;">🎉 YAYYY! TERIMA KASIH! 🎉</h3>
         <p>Aku nggak nyangka kamu bakal jawab iya! Ini bener-bener bikin hariku!</p>
-        <p>Aku tunggu kabar baiknya ya Mich! 😊</p>
+        <p>Aku tunggu kabar baiknya ya najwaa! </p>
         <p style="margin-top: 15px;"><i>Website ini jadi kenangan pertama kita ya! 💝</i></p>
     `;
     response.classList.remove('hidden');
@@ -305,13 +305,12 @@ yesBtn.addEventListener('click', () => {
 });
 
 maybeBtn.addEventListener('click', () => {
-    // Tampilkan pesan dulu sebelum ganti button
     maybeBtn.innerHTML = '<i class="fas fa-running"></i> Tunggu dulu...';
     maybeBtn.style.background = 'linear-gradient(90deg, #ff416c, #ff4b2b)';
     
     setTimeout(() => {
         response.innerHTML = `
-            <h3 style="color: #a5b4fc;">😊 Aku Hargai Kejujuranmu</h3>
+            <h3 style="color: #a5b4fc;">Aku Hargai Kejujuranmu</h3>
             <p>Terima kasih udah jujur dan nggak langsung nolak.</p>
             <p>Aku ngerti kok kalau butuh waktu. Yang penting kita masih bisa berteman dulu.</p>
             <p style="margin-top: 15px;"><i>Tidak ada tekanan sama sekali, kok. Yang penting jujur 🌸</i></p>
@@ -339,7 +338,7 @@ function handleResize() {
 document.addEventListener('DOMContentLoaded', () => {
     const signatureName = document.querySelector('.signature-name');
     if (signatureName) {
-        signatureName.textContent = "[GANTI NAMA LO]";
+        signatureName.textContent = "Kakk Laurenn";
     }
     
     nextBtn.style.display = 'none';
