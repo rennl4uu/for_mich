@@ -286,12 +286,13 @@ nextBtn.addEventListener('click', () => {
     question.style.animation = 'fadeInUp 1s ease';
 });
 
-// ===== ANSWER BUTTONS - FINAL VERSION =====
+// ===== ANSWER BUTTONS - VERSI LAMA =====
 yesBtn.addEventListener('click', () => {
     response.innerHTML = `
         <h3 style="color: #96c93d;">🎉 YAYYY! TERIMA KASIH! 🎉</h3>
         <p>Aku nggak nyangka kamu bakal jawab iya! Ini bener-bener bikin hariku!</p>
-        <p>Aku tunggu kabar baiknya ya uwaa! 😊</p>
+        <p>Aku tunggu kabar baiknya ya Mich! 😊</p>
+        <p style="margin-top: 15px;"><i>Website ini jadi kenangan pertama kita ya! 💝</i></p>
     `;
     response.classList.remove('hidden');
     launchConfetti();
@@ -300,23 +301,29 @@ yesBtn.addEventListener('click', () => {
         question.classList.add('hidden');
         closing.classList.remove('hidden');
         closing.style.animation = 'fadeInUp 1s ease';
-    }, 4000);
+    }, 5000);
 });
 
 maybeBtn.addEventListener('click', () => {
-    maybeBtn.disabled = true;
-    maybeBtn.style.opacity = '0.5';
-    maybeBtn.style.cursor = 'default';
-    maybeBtn.innerHTML = '<i class="fas fa-clock"></i> Butuh waktu...';
+    // Tampilkan pesan dulu sebelum ganti button
+    maybeBtn.innerHTML = '<i class="fas fa-running"></i> Tunggu dulu...';
+    maybeBtn.style.background = 'linear-gradient(90deg, #ff416c, #ff4b2b)';
     
-    response.innerHTML = `
-        <div style="color: #888; font-size: 0.95rem; margin-top: 10px;">
-            <i class="fas fa-lightbulb"></i> Pilihan "Mau" akan membawamu ke kejutan berikutnya...
-        </div>
-    `;
-    response.classList.remove('hidden');
-    
-    yesBtn.style.boxShadow = '0 0 8px rgba(0, 176, 155, 0.2)';
+    setTimeout(() => {
+        response.innerHTML = `
+            <h3 style="color: #a5b4fc;">😊 Aku Hargai Kejujuranmu</h3>
+            <p>Terima kasih udah jujur dan nggak langsung nolak.</p>
+            <p>Aku ngerti kok kalau butuh waktu. Yang penting kita masih bisa berteman dulu.</p>
+            <p style="margin-top: 15px;"><i>Tidak ada tekanan sama sekali, kok. Yang penting jujur 🌸</i></p>
+        `;
+        response.classList.remove('hidden');
+        
+        setTimeout(() => {
+            question.classList.add('hidden');
+            closing.classList.remove('hidden');
+            closing.style.animation = 'fadeInUp 1s ease';
+        }, 4000);
+    }, 1500);
 });
 
 // ===== WINDOW RESIZE HANDLER =====
@@ -332,7 +339,7 @@ function handleResize() {
 document.addEventListener('DOMContentLoaded', () => {
     const signatureName = document.querySelector('.signature-name');
     if (signatureName) {
-        signatureName.textContent = "Kakk Laurenn";
+        signatureName.textContent = "[GANTI NAMA LO]";
     }
     
     nextBtn.style.display = 'none';
