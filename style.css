@@ -267,11 +267,6 @@ h1 {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect khusus untuk button "Mau" */
-.yes-btn:hover {
-    box-shadow: 0 0 12px rgba(0, 176, 155, 0.3) !important;
-}
-
 .response-simple {
     margin-top: 30px;
     padding: 25px;
